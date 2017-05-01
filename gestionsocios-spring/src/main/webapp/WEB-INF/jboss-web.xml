@@ -1,0 +1,5 @@
+<!DOCTYPE jboss-web PUBLIC "-//JBoss//DTD Web Application 5.0//EN" "http://www.jboss.org/j2ee/dtd/jboss-web_5_0.dtd">       
+<jboss-web>     
+<!-- El context-root vincula con el name del plugin@pom_del_hijo maven-war-plugin-->
+    <context-root>/gestionsocios</context-root>        
+</jboss-web> 

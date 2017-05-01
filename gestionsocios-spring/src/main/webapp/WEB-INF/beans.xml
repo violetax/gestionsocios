@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 	
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/jee
+    http://www.springframework.org/schema/jee/spring-jee.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+       <property name="basenames">
+           <list>
+               <value>messages/validationMessages</value>
+               <value>messages/viewtext</value>
+           </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8" />
+    </bean>
+    
+    
+    <jee:jndi-lookup id="combateServiceRemote" jndi-name="java:app/gestionsocios-ejb/combateServiceBean" />
+    <jee:jndi-lookup id="reciboServiceRemote" jndi-name="java:app/gestionsocios-ejb/reciboServiceBean" />
+    <jee:jndi-lookup id="socioServiceRemote" jndi-name="java:app/gestionsocios-ejb/socioServiceBean" />
+    <jee:jndi-lookup id="veladaServiceRemote" jndi-name="java:app/gestionsocios-ejb/veladaServiceBean" />
+    
+    <bean id="combateServiceImp" class="com.ipartek.formacion.service.CombateServiceImp">
+		<property name="combateServiceRemote" ref="combateServiceRemote"/>
+	</bean>
+	
+	<bean id="tipoResultadoCombateServiceImp" class="com.ipartek.formacion.service.TipoResultadoCombateServiceImp" />
+	
+	<bean id="reciboServiceImp" class="com.ipartek.formacion.service.ReciboServiceImp">
+		<property name="reciboServiceRemote" ref="reciboServiceRemote"/>
+	</bean>
+	<bean id="socioServiceImp" class="com.ipartek.formacion.service.SocioServiceImp">
+		<property name="socioServiceRemote" ref="socioServiceRemote"/>
+	</bean>
+	<bean id="veladaServiceImp" class="com.ipartek.formacion.service.VeladaServiceImp">
+		<property name="veladaServiceRemote" ref="veladaServiceRemote"/>
+	</bean>
+    
+</beans>

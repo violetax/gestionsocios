@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ 
+<tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="my-template"
+       template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+       <put-attribute name="constantes-gral" value="/resources/constantes/constantes-gral.jsp" />
+       <put-attribute name="constantes" value="" />
+       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+       <put-attribute name="navheader" value="/WEB-INF/views/tiles/template/navigationHeader.jsp" />
+       <!--   
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+        -->  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />  
+   </definition>  
+  
+   <!-- Home Page -->
+   <definition name="home" extends="my-template">
+       <put-attribute name="constantes" value="/resources/constantes/home.jsp" />  
+       <put-attribute name="navheader" value="" />
+       <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />  
+   </definition>  
+    <!-- Login -->
+   <definition name="login" extends="my-template">
+       <put-attribute name="constantes" value="/resources/constantes/login.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
+   </definition>
+   
+   <!-- SOCIOS -->
+   <definition name="socios" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/socios.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/socios/socios.jsp" />  
+   </definition>
+   <definition name="sociodetalle" extends="my-template">
+   		 <put-attribute name="body" value="/WEB-INF/views/pages/socios/socio.jsp" />  
+   </definition>
+   
+      <!-- COMPETIDORES -->
+   <definition name="competidores" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/competidores.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/socios/competidores/competidores.jsp" />  
+   </definition>
+   
+      <!-- VELADAS -->
+   <definition name="veladas" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/veladas.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/veladas/veladas.jsp" />  
+   </definition>
+    <definition name="veladaform" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/velada.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/veladas/velada.jsp" />  
+   </definition>  
+   
+   <!-- COMBATES -->
+   <definition name="combates" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/combates.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/combates/combates.jsp" />  
+   </definition>
+    <definition name="combateform" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/combate.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/combates/combate.jsp" />  
+   </definition>
+   
+   <!-- RECIBOS -->
+   <definition name="recibos" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/recibos.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/recibos/recibos.jsp" />  
+   </definition>
+    <definition name="reciboform" extends="my-template">
+   		<put-attribute name="constantes" value="/resources/constantes/recibo.jsp" />
+   		<put-attribute name="body" value="/WEB-INF/views/pages/recibos/recibo.jsp" />  
+   </definition>
+</tiles-definitions>
