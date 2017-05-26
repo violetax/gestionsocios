@@ -15,7 +15,7 @@ import com.ipartek.formacion.persistence.Socio;
 
 public interface SocioRestClient {
 
-	final static String URL = "http://localhost:8080/gestiondocente/api/socios";
+	final static String URL = "http://localhost:8080/gestionsocios/api/socios";
 	
 	public List<Socio> getAll();	
 	public Socio getById(int codigo);	

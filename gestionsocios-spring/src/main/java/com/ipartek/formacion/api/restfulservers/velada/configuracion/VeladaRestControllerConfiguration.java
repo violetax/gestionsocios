@@ -1,4 +1,4 @@
-package com.ipartek.formacion.api.restfulservers.socio.configuration;
+package com.ipartek.formacion.api.restfulservers.velada.configuracion;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.ipartek.formacion.api.restfulservers.socio")
-public class SocioRestControllerConfiguration {
+@ComponentScan(basePackages = "com.ipartek.formacion.api.restfulservers.velada")
+public class VeladaRestControllerConfiguration {
 
 }

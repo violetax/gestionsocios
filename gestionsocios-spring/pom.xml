@@ -72,13 +72,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.library}</version>
         </dependency>
-        <!--   xml       -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-            <version>${jackson.library}</version>
-        </dependency>
-
 	<!-- 	-->
 		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
 		<dependency>
@@ -352,15 +345,6 @@
             </plugin>
             
             <!--  WEB SERVICES NO func execs -->
-          
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.1</version>
-          <configuration>
-            <!-- put your configurations here -->
-          </configuration>
-        </plugin>
           
      		<!--   //WEB SERVICES -->
         </plugins>

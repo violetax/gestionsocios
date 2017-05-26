@@ -2,6 +2,8 @@ package com.ipartek.formacion.api.restfulservers.socio;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,29 +16,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ipartek.formacion.persistence.Socio;
 import com.ipartek.formacion.service.interfaces.SocioService;
+
 /**
 *
-*
 @author Violeta González
-*
 *
 **/
 
 @CrossOrigin(origins ="*", maxAge = 3600, 
 methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT })
 @RestController
-@RequestMapping(value = "/api/socios")
+@RequestMapping(value = "/api/socio")
 public class SocioRestController {
 
 	@Autowired
 	SocioService sS;
-	
+	private static final Logger LOGGER = LoggerFactory.getLogger(SocioRestController.class);
 	@RequestMapping(value="/{codigo}", method = RequestMethod.GET)
 	public ResponseEntity<Socio> getById(@PathVariable("codigo") int codigo) {
 		
 		Socio socio = sS.getById(codigo);
 		ResponseEntity<Socio> response = null;
-		
+		LOGGER.info(""+codigo+""+socio.toString());
 		if (socio == null) {
 			response = new ResponseEntity<Socio>(HttpStatus.NOT_FOUND);
 		} else {
