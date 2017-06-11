@@ -42,6 +42,7 @@ public class SocioController {
 	
 	@Autowired
 	private SocioService sS;
+	
 	@Resource(name = "socioValidator")
 	SocioValidator validator;
 	
@@ -55,7 +56,7 @@ public class SocioController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getAll() {
-		mav = new ModelAndView("socios");
+		mav = new ModelAndView("socios/socios");
 			List<Socio> socios = sS.getAll();
 		mav.addObject("listadoSocios", socios);
 			LOGGER.info("Cargada lista de socios.");
@@ -64,7 +65,7 @@ public class SocioController {
 
 	@RequestMapping(value = "/{id}")
 	public ModelAndView getById(@PathVariable("id") long id) {
-		mav = new ModelAndView("socio");
+		mav = new ModelAndView("socios/socio");
 		mav.addObject("socio", sS.getById(id));
 			LOGGER.info("Cargado socio.");
 		return mav;
@@ -73,7 +74,7 @@ public class SocioController {
 	@RequestMapping(method = RequestMethod.GET, value = "/competidores")
 	public ModelAndView getCompetidores() {
 		
-		mav = new ModelAndView("competidores");
+		mav = new ModelAndView("socios/competidores/competidores");
 		List<Socio> competidores = sS.getCompetidores();
 			LOGGER.info("Lista: " + competidores.size());
 		mav.addObject("listadoCompetidores", competidores);
@@ -95,7 +96,7 @@ public class SocioController {
 	@RequestMapping(value = "/editSocio/{codigosocio}")
 	public ModelAndView editSocio(@PathVariable("codigosocio") long codigosocio) {
 		
-		mav = new ModelAndView("socio");
+		mav = new ModelAndView("socios/socio");
 		mav.addObject("socio", sS.getById(codigosocio));
 		
 			LOGGER.info("Editar socio.");

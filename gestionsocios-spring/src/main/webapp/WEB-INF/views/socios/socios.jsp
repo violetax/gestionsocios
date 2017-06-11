@@ -3,6 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>   
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> 
 
+<jsp:include page="../defaultHeader.jsp" />
+
 <section class="row">
 		
 		<header class="col-xs-12"><h2 class=""> ${sociosTitulo } </h2></header>
@@ -65,5 +67,5 @@
 		
 	</section>
 	
-	
+	<jsp:include page="../defaultFooter.jsp" />	
 

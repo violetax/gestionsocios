@@ -2,6 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
+<jsp:include page="defaultHeader.jsp" />
 
 <div class="jumbotron">
   <h1>${clubNombre}</h1>
@@ -13,3 +14,4 @@
   	</p>
 </div>
 
+<jsp:include page="defaultFooter.jsp" />
