@@ -90,7 +90,7 @@ public class SocioController {
 		socio.setActivo(true);
 		model.addAttribute("socio", socio);
 			LOGGER.info("Añadir socio.");
-		return "socio";
+		return "socios/socio";
 	}
 	
 	@RequestMapping(value = "/editSocio/{codigosocio}")
@@ -112,7 +112,7 @@ public class SocioController {
 
 		if (bindingResult.hasErrors()) {
 			LOGGER.info("Los datos del socio tienen errores");
-			destino = "socio";
+			destino = "socios/socio";
 		} else {
 			destino = "redirect:/socios";
 			if (socio.getCodigo() > -1) {

@@ -24,11 +24,55 @@ crossorigin="anonymous">
 		<!-- -   <c:out value="${seccion}"/> --> 
 </title>
 
-<spring:message var="idiomasTitulo" code="idiomas.titulo" />
-<spring:message var="idiomaCastellano" code="idioma.castellano" />
-<spring:message var="idiomaIngles" code="idioma.ingles" />
-<spring:message var="botonLogout" code="boton.logout" />
-<spring:message var="botonLogin" code="boton.login" />
+<spring:message var="aplicacionNombre" scope="request" code="aplicacion.nombre" />
+<spring:message var="botonLogin" scope="request" code="boton.login" />
+<spring:message var="botonLogout" scope="request" code="boton.logout" />
+<spring:message var="botonAcceso" scope="request" code="boton.acceso" />
+<spring:message var="clubNombre" scope="request" code="club.nombre" />
+<spring:message var="idiomasTitulo" scope="request" code="idiomas.titulo" />
+<spring:message var="idiomaCastellano" scope="request" code="idioma.castellano" />
+<spring:message var="idiomaIngles" scope="request" code="idioma.ingles" />
+<spring:message var="formEditar" scope="request" code="form.editar" />
+<spring:message var="formGuardar" scope="request" code="form.guardar" />
+<spring:message var="formCancelar" scope="request" code="form.cancelar" />
+<spring:message var="formCrear" scope="request" code="form.crear" />
+<spring:message var="homeTitulo" scope="request" code="home.titulo" />
+<spring:message var="menuCombates" scope="request" code="menu.combates" />
+<spring:message var="menuRecibos" scope="request" code="menu.recibos" />
+<spring:message var="menuSocios" scope="request" code="menu.socios" />
+<spring:message var="menuCompetidores" scope="request" code="menu.competidores" />
+<spring:message var="menuVeladas" scope="request" code="menu.veladas" />
+<spring:message var="combatesTitulo" scope="request" code="combates.titulo" />
+<spring:message var="combateTitulo" scope="request" code="combate.titulo" />
+<spring:message var="combateResultado" scope="request" code="combate.resultado" />
+<spring:message var="combateComentarios" scope="request" code="combate.comentarios" />
+<spring:message var="recibosTitulo" scope="request" code="recibos.titulo" />
+<spring:message var="reciboTitulo" scope="request" code="recibo.titulo" />
+<spring:message var="reciboCantidad" scope="request" code="recibo.cantidad" />
+<spring:message var="reciboConcepto" scope="request" code="recibo.concepto" />
+<spring:message var="reciboFecha" scope="request" code="recibo.fecha" />
+<spring:message var="sociosSocios" scope="request" code="socios.titulo" />
+<spring:message var="socioTitulo" scope="request" code="socio.titulo" />
+<spring:message var="socioNombre" scope="request" code="socio.nombre" />
+<spring:message var="socioApellidos" scope="request" code="socio.apellidos" />
+<spring:message var="socioTelefono" scope="request" code="socio.telefono" />
+<spring:message var="socioEmail" scope="request" code="socio.email" />
+<spring:message var="socioNrotarjeta" scope="request" code="socio.nrotarjeta" />
+<spring:message var="socioCompetidor" scope="request" code="socio.competidor" />
+<spring:message var="competidoresTitulo" scope="request" code="competidores.titulo" />
+<spring:message var="competidoresNombre" scope="request" code="competidores.nombre" />
+<spring:message var="competidoresApellidos" scope="request" code="competidores.apellidos" />
+<spring:message var="competidoresRecord" scope="request" code="competidores.record" />
+<spring:message var="veladasTitulo" scope="request" code="veladas.titulo" />
+<spring:message var="veladaTitulo" scope="request" code="velada.titulo" />
+<spring:message var="veladaFecha" scope="request" code="velada.fecha" />
+<spring:message var="veladaLugar" scope="request" code="velada.lugar" />
+<spring:message var="veladaProvincia" scope="request" code="velada.provincia" />
+<spring:message var="veladaComentarios" scope="request" code="velada.comentarios" />
+<spring:message var="formularioSocios" scope="request" code="formulario.socios" />
+<spring:message var="formularioRecibos" scope="request" code="formulario.recibos" />
+<spring:message var="formularioVeladas" scope="request" code="formulario.veladas" />
+<spring:message var="formularioCombates" scope="request" code="formulario.combates" />
 
 
 </head>

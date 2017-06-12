@@ -12,7 +12,7 @@ import com.ipartek.formacion.socio.SocioServiceRemote;
 /**
 *
 *
-@author Violeta González
+@author Violeta Gonzalez
 *
 *
 **/

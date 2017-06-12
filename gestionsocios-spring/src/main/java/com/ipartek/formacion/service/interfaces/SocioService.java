@@ -7,7 +7,7 @@ import com.ipartek.formacion.persistence.Socio;
 /**
 *
 *
-@author Violeta González
+@author Violeta Gonzalez
 *
 *
 **/

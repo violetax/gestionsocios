@@ -9,7 +9,7 @@ import com.ipartek.formacion.service.Util;
 /**
 *
 *
-@author Violeta González
+@author Violeta Gonzalez
 *
 *
 **/

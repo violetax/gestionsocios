@@ -7,13 +7,7 @@ import org.springframework.core.convert.converter.Converter;
 
 import com.ipartek.formacion.persistence.Socio;
 import com.ipartek.formacion.service.interfaces.SocioService;
-/**
-*
-*
-@author Violeta González
-*
-*
-**/
+
 /**
 *
 * @Violeta González
